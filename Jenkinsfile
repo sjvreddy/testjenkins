@@ -4,8 +4,8 @@ pipeline {
     stage('test') {
       steps {
         echo 'hello world!'
-        chef_cookbook_lint(installation: 'Linting')
-        chef_cookbook_cookstyle(installation: '/opt/chefdk/bin')
+        chef_cookbook_lint(installation: 'chefdk')
+        chef_cookbook_cookstyle(installation: 'chefdk')
       }
     }
   }
