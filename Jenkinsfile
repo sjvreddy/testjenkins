@@ -4,8 +4,7 @@ pipeline {
     stage('test') {
       steps {
         parallel(
-          "test": {
-            echo 'hello world!'
+          "Test": {
             chef_cookbook_lint(installation: 'chefdk')
             chef_cookbook_cookstyle(installation: 'chefdk')
             
