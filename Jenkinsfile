@@ -11,6 +11,7 @@ pipeline {
           },
           "Staging": {
             chef_cookbook_cookstyle(installation: 'chefdk')
+            chef_cookbook_functional(installation: 'chefdk')
             
           }
         )
