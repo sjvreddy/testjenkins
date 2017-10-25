@@ -5,7 +5,7 @@ pipeline {
       steps {
         parallel(
           "Test": {
-            chef_cookbook_cookstyle(installation: 'chefdk')
+            chef_cookbook_cookstyle()
             
           },
           "Staging": {
