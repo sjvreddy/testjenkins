@@ -1,16 +1,15 @@
 pipeline {
   agent none
   stages {
-    stage('test') {
+    stage('Test') {
       steps {
         parallel(
           "Test": {
-            chef_cookbook_cookstyle()
+            chef_cookbook_cookstyle(installation: 'chefdk')
             
           },
-          "Staging": {
-            chef_cookbook_cookstyle(installation: 'chefdk')
-            chef_cookbook_functional(installation: 'chefdk')
+          "Stage": {
+            chef_cookbook_foodcritic(installation: 'chefdk')
             
           }
         )
