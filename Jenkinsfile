@@ -23,7 +23,7 @@ pipeline {
             chef_cookbook_functional()
             
           },
-          "": {
+          "Publish": {
             chef_cookbook_publish()
             
           }
