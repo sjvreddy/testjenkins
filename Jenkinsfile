@@ -22,6 +22,10 @@ pipeline {
           "Chef Cookbook Functional": {
             chef_cookbook_functional()
             
+          },
+          "": {
+            chef_cookbook_publish()
+            
           }
         )
       }
