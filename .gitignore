@@ -20,6 +20,7 @@ bin/*
 Berksfile.lock
 .zero-knife.rb
 Policyfile.lock.json
+syntaxcache/
 
 # Knife
 trusted_certs/
