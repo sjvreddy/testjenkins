@@ -10,11 +10,23 @@ pipeline {
     stage('Chef') {
       steps {
         parallel(
-          "Chef Cookbook Unit": {
+          "Lint - Cookstyle": {
+            chef_cookbook_cookstyle()
+            
+          },
+          "Lint - foodcritic": {
+            chef_cookbook_foodcritic()
+            
+          },
+          "Unit test": {
             chef_cookbook_unit()
             
           },
-          "Publish": {
+          "Functional test": {
+            chef_cookbook_functional()
+            
+          },
+          "Publish to server": {
             chef_cookbook_publish()
             
           }
