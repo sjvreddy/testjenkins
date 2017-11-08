@@ -14,15 +14,6 @@ pipeline {
             chef_cookbook_unit()
             
           },
-          "Chef Cookbook Lint": {
-            chef_cookbook_foodcritic()
-            chef_cookbook_cookstyle()
-            
-          },
-          "Chef Cookbook Functional": {
-            chef_cookbook_functional()
-            
-          },
           "Publish": {
             chef_cookbook_publish()
             
