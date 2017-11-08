@@ -31,4 +31,7 @@ pipeline {
       }
     }
   }
+  environment {
+    CookbookName = 'testjenkins'
+  }
 }
