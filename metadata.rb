@@ -1,4 +1,4 @@
-name 'cookbooks/testjenkins'
+name 'testjenkins'
 maintainer 'The Authors'
 maintainer_email 'you@example.com'
 license 'All Rights Reserved'
